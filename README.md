@@ -1,75 +1,131 @@
-# AWS Resource Inventory Automation Script
+Here’s a **cleaned, organized, and professional version** of your project README with correct formatting, corrected mistakes, and better structure.
 
-A shell script to automate the process of listing **active AWS resources** across different services such as EC2, S3, RDS, Lambda, VPC, CloudWatch, etc.
-
-This script helps DevOps engineers, cloud administrators, and auditors quickly fetch cloud inventory for monitoring, cost savings, or reporting purposes.
-
----
-
-## 🚀 Features
-
-- Lists active resources for 14+ AWS services:
-  - EC2  
-  - RDS  
-  - S3  
-  - CloudFront  
-  - VPC  
-  - IAM  
-  - Route53  
-  - CloudWatch  
-  - CloudFormation  
-  - Lambda  
-  - SNS  
-  - SQS  
-  - DynamoDB  
-  - EBS  
-
-- Validates AWS CLI installation & configuration  
-- Simple usage with region + service  
-- **Cron job automation support**  
-- Designed for beginners and DevOps freshers  
-- Clean, readable, production-style script  
+You can copy-paste this directly into your **GitHub portfolio**.
+I’ve fixed typos, improved clarity, added headings, and removed duplicate parts.
 
 ---
 
-## 📦 Requirements
+# 🚀 AWS Resource Inventory Automation Script
 
-- AWS CLI installed  
-- AWS credentials configured (`aws configure`)  
-- Executable permission for the script:  
-  ```bash
-  chmod +x aws_resource_list.sh
-  ```
+A production-style **shell script** that automatically lists **active AWS resources** across multiple AWS services such as EC2, S3, RDS, CloudFront, Lambda, VPC, IAM, and more.
+
+This is an excellent project for **DevOps freshers**, showcasing your skills in:
+
+* AWS CLI
+* Bash scripting
+* Automation
+* Logging
+* Cron scheduling
 
 ---
 
-## 🧩 Usage
+## ⭐ Features
+
+* Lists active resources for **14+ AWS services**
+
+  * EC2
+  * RDS
+  * S3
+  * CloudFront
+  * VPC
+  * IAM
+  * Route53
+  * CloudWatch
+  * CloudFormation
+  * Lambda
+  * SNS
+  * SQS
+  * DynamoDB
+  * EBS
+
+* Validates AWS CLI installation & configuration
+
+* Dynamic usage: provide **region + service**
+
+* **Cron job automation** for scheduled inventory reports
+
+* Saves logs automatically
+
+* Beginner friendly but professional
+
+---
+
+## 📌 Requirements
+
+* AWS account
+* AWS CLI installed
+* AWS CLI configured (`aws configure`)
+* Shell script execution permissions
+
+---
+
+## 🧩 Installation & Setup
+
+### **1. Update package list**
+
+```bash
+sudo apt update
+```
+
+### **2. Install AWS CLI**
+
+```bash
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
+
+### **3. Configure AWS CLI**
+
+```bash
+aws configure
+```
+
+Enter:
+
+* AWS Access Key
+* AWS Secret Key
+* Default region
+* Output format (json/text/table)
+
+### **4. Give execute permission to the script**
+
+```bash
+chmod +x aws_resource_list.sh
+```
+
+---
+
+## ▶️ Usage
 
 ### **1. List resources for a specific service**
-```
+
+```bash
 ./aws_resource_list.sh <aws_region> <service>
 ```
 
 #### Example:
-```
-./aws_resource_list.sh us-east-1 ec2
+
+```bash
+./aws_resource_list.sh ap-south-1 ec2
 ```
 
 ---
 
-## ⏱️ Automate with Cron (New Feature)
+## ⏱️ Schedule Automatic AWS Inventory Reports
 
-You can automate daily AWS resource reporting by scheduling the script using:
+Use cron scheduling like this:
 
+```bash
+./aws_resource_list.sh --schedule "*/2 * * * *" ap-south-1 ec2
 ```
-./aws_resource_list.sh --schedule "0 9 * * *" us-east-1 ec2
-```
 
-This will automatically:
+### ✔ Explanation:
 
-- Add a cron job  
-- Run daily at 9 AM  
-- Log output to:  
+* `*/2 * * * *` → runs every 2 minutes
+* Fetches EC2 inventory
+* Saves output to:
+
   ```
   /var/log/aws-inventory.log
   ```
@@ -78,28 +134,28 @@ This will automatically:
 
 ## 📁 Supported Services
 
-| Service       | CLI Command Used |
-|---------------|------------------|
-| EC2           | describe-instances |
-| RDS           | describe-db-instances |
-| S3            | list-buckets |
-| CloudFront    | list-distributions |
-| VPC           | describe-vpcs |
-| IAM           | list-users |
-| Route53       | list-hosted-zones |
-| CloudWatch    | describe-alarms |
-| CloudFormation| describe-stacks |
-| Lambda        | list-functions |
-| SNS           | list-topics |
-| SQS           | list-queues |
-| DynamoDB      | list-tables |
-| EBS           | describe-volumes |
+| Service        | CLI Command Used      |
+| -------------- | --------------------- |
+| EC2            | describe-instances    |
+| RDS            | describe-db-instances |
+| S3             | list-buckets          |
+| CloudFront     | list-distributions    |
+| VPC            | describe-vpcs         |
+| IAM            | list-users            |
+| Route53        | list-hosted-zones     |
+| CloudWatch     | describe-alarms       |
+| CloudFormation | describe-stacks       |
+| Lambda         | list-functions        |
+| SNS            | list-topics           |
+| SQS            | list-queues           |
+| DynamoDB       | list-tables           |
+| EBS            | describe-volumes      |
 
 ---
 
-## 📜 Cron Log File
+## 📝 Cron Log File Location
 
-All automated runs will be saved into:
+Logs for automated executions (cron) will be saved to:
 
 ```
 /var/log/aws-inventory.log
@@ -109,11 +165,21 @@ All automated runs will be saved into:
 
 ## 👩‍💻 Author
 
-**Shivani Rawat**  
-DevOps | Cloud | Automation | AWS | Linux  
-(You can add LinkedIn/GitHub links here)
+**Shivani Rawat**
+DevOps | AWS | Automation | Linux
+(Add your GitHub/LinkedIn links here)
 
 ---
 
-## 📝 License
+## 📜 License
+
 This project is open-source. You may modify or distribute it freely.
+
+---
+
+If you want, I can also:
+✅ Format this for **GitHub README**
+✅ Add **badges** (AWS, Bash, Linux)
+✅ Add **folder structure**
+✅ Add an **architecture diagram**
+Just tell me!
