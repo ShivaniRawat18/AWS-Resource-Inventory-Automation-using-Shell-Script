@@ -1,10 +1,3 @@
-Here’s a **cleaned, organized, and professional version** of your project README with correct formatting, corrected mistakes, and better structure.
-
-You can copy-paste this directly into your **GitHub portfolio**.
-I’ve fixed typos, improved clarity, added headings, and removed duplicate parts.
-
----
-
 # 🚀 AWS Resource Inventory Automation Script
 
 A production-style **shell script** that automatically lists **active AWS resources** across multiple AWS services such as EC2, S3, RDS, CloudFront, Lambda, VPC, IAM, and more.
